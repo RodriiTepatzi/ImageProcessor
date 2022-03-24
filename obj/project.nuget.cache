@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GzHkozwpZw2XACHaq85dFIctQ7OV0HbA8iekl3vih+Uzb3BPFQvCagXOu0IXy1G+Ph6IqA2o9KkC7TNy6pkeeQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sprno\\source\\repos\\ProcesadorImagenes\\ProcesadorImagenes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sprno\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\sprno\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
