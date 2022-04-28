@@ -123,28 +123,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sprno\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\biote\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sprno\\source\\repos\\ProcesadorImagenes\\ProcesadorImagenes.csproj",
+      "projectUniqueName": "C:\\Users\\biote\\OneDrive\\Escritorio\\ProcesadorImagenes\\ProcesadorImagenes.csproj",
       "projectName": "ProcesadorImagenes",
-      "projectPath": "C:\\Users\\sprno\\source\\repos\\ProcesadorImagenes\\ProcesadorImagenes.csproj",
-      "packagesPath": "C:\\Users\\sprno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sprno\\source\\repos\\ProcesadorImagenes\\obj\\",
+      "projectPath": "C:\\Users\\biote\\OneDrive\\Escritorio\\ProcesadorImagenes\\ProcesadorImagenes.csproj",
+      "packagesPath": "C:\\Users\\biote\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\biote\\OneDrive\\Escritorio\\ProcesadorImagenes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sprno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\biote\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
@@ -192,7 +189,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,6 +13,30 @@ namespace ProcesadorImagenes.Data
 {
     class ImageProcessor
     {
+
+        [Obsolete("This method is deprecated since it has limits on width and height. Use Bitmap methods instead")]
+        public static int[,] GetMatrixLegacy(string filePath)
+        {
+            Bitmap imagen = new Bitmap(Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), filePath));
+
+            int height = imagen.Height, width = imagen.Width, promedio;
+            int[,] mat = new int[height, width];
+            double funcion;
+
+            for (int i = 0; i < imagen.Width; i++)
+            {
+                for (int j = 0; j < imagen.Height; j++)
+                {
+                    funcion = ((.2125 * imagen.GetPixel(i, j).R) + (.7154 * imagen.GetPixel(i, j).G) + (.0721 * imagen.GetPixel(i, j).B));
+                    promedio = Convert.ToInt32(funcion);
+
+                    mat[j, i] = promedio;
+                }
+            }
+            SaveMatrixToTxt(mat, filePath);
+            return mat;
+        }
+
         public static Bitmap ConvertNegative(Bitmap bitmap)
         {
             Bitmap result = new Bitmap(bitmap.Width, bitmap.Height);
@@ -54,83 +78,142 @@ namespace ProcesadorImagenes.Data
             return result;
         }
 
-        public static Bitmap Thresholding(Bitmap bitmap, int threshold)
+        // Legacy Functions
+        [Obsolete("This method is deprecated since it has limits on width and height. Use not legacy methods instead")]
+        public static void ConvertToBinaryLegacy(int[,] matrix, string inputImage, string outputImage)
         {
-            Bitmap result = new Bitmap(bitmap.Width, bitmap.Height);
-            int hue;
-            Color color1, color2;
-            for (int i = 0; i < bitmap.Width; i++)
+            Bitmap bitmap = new Bitmap(Image.FromFile(inputImage));
+            int[,] m_bn = new int[matrix.GetLength(0), matrix.GetLength(1)];
+            m_bn = (int[,])matrix.Clone();
+
+            for (int i = 0; i < m_bn.GetLength(0); i++)
             {
-                for (int j = 0; j < bitmap.Height; j++)
+                for (int j = 0; j < m_bn.GetLength(1); j++)
                 {
-                    color1 = bitmap.GetPixel(i, j);
-                    if (color1.R >= threshold)
+                    if (m_bn[i, j] < 30)
                     {
-                        color2 = Color.FromArgb(255, 255, 255);
+                        m_bn[i, j] = 0;
+                        bitmap.SetPixel(j, i, Color.White);
                     }
                     else
                     {
-                        color2 = Color.FromArgb(0, 0, 0);
+                        m_bn[i, j] = 1;
+                        bitmap.SetPixel(j, i, Color.Black);
                     }
-                    result.SetPixel(i, j, color2);
                 }
             }
-            return result;
+            SaveMatrixToTxt(m_bn, outputImage);
+            bitmap.Save(outputImage);
         }
 
-        public Bitmap Brightness(Bitmap bitmap, int brightnessValue)
+        [Obsolete("This method is deprecated since it has limits on width and height. Use not legacy methods instead")]
+        public static string ConvertToGrayLegacy(string inputPath, string outputPath)
         {
-            Bitmap result = new Bitmap(bitmap.Width, bitmap.Height);
-            int hue, r, g, b;
-            Color color1, color2;
-            for (int i = 0; i < bitmap.Width; i++)
+            string outputhPathT = outputPath;
+            string filename = Path.GetFileNameWithoutExtension(outputPath);
+
+            if (!string.IsNullOrEmpty(filename))
             {
-                for (int j = 0; j < bitmap.Height; j++)
+                if(filename.Contains('(') && filename.Contains(')'))
                 {
-                    color1 = bitmap.GetPixel(i, j);
-                    if (color1.R + brightnessValue >= 255)
-                    {
-                        r = 255;
-                    }
-                    else if (color1.R + brightnessValue < 0)
-                    {
-                        r = 0;
-                    }
-                    else
-                    {
-                        r = color1.R + brightnessValue;
-                    }
-
-                    if (color1.G + brightnessValue >= 255)
-                    {
-                        g = 255;
-                    }
-                    else if (color1.G + brightnessValue < 0)
-                    {
-                        g = 0;
-                    }
-                    else
-                    {
-                        g = color1.G + brightnessValue;
-                    }
-
-                    if (color1.B + brightnessValue >= 255)
-                    {
-                        b = 255;
-                    }
-                    else if (color1.B + brightnessValue < 0)
-                    {
-                        b = 0;
-                    }
-                    else
-                    {
-                        b = color1.B + brightnessValue;
-                    }
-                    color2 = Color.FromArgb(r, g, b);
-                    result.SetPixel(i, j, color2);
+                    int index = int.Parse(filename[filename.Length - 2].ToString());
+                    outputhPathT = outputPath.Replace("(" + index + ")", "(" + (index + 1).ToString() + ")");
+                    
+                }
+                else
+                {
+                    outputhPathT = outputPath.Insert(outputPath.Length - 4, "(2)");
                 }
             }
-            return result;
+            
+
+            using (Bitmap bitmap = new Bitmap(inputPath))
+            {
+                int height = bitmap.Height, width = bitmap.Width, prom;
+                int[,] m_g = new int[height, width];
+                double function;
+
+                for (int i = 0; i < bitmap.Width; i++)
+                {
+                    for (int j = 0; j < bitmap.Height; j++)
+                    {
+                        function = ((.2125 * bitmap.GetPixel(i, j).R) + (.7154 * bitmap.GetPixel(i, j).G) + (.0721 * bitmap.GetPixel(i, j).B));
+                        prom = Convert.ToInt32(function);
+                        bitmap.SetPixel(i, j, Color.FromArgb(bitmap.GetPixel(i, j).A, prom, prom, prom));
+                        m_g[j, i] = prom;
+                    }
+                }
+
+                bitmap.Save(outputhPathT);
+                bitmap.Dispose();
+                SaveMatrixToTxt(m_g, outputhPathT);
+            }
+
+            return outputhPathT;
+        }
+
+        [Obsolete("This method is deprecated since it has limits on width and height. Use not legacy methods instead")]
+        public static string ConvertToNegativeLegacy(string inputPath, string outputPath)
+        {
+            string outputhPathT = outputPath;
+            string filename = Path.GetFileNameWithoutExtension(outputPath);
+
+            if (!string.IsNullOrEmpty(filename))
+            {
+                if (filename.Contains('(') && filename.Contains(')'))
+                {
+                    int index = int.Parse(filename[filename.Length - 2].ToString());
+                    outputhPathT = outputPath.Replace("(" + index + ")", "(" + (index + 1).ToString() + ")");
+
+                }
+                else
+                {
+                    outputhPathT = outputPath.Insert(outputPath.Length - 4, "(2)");
+                }
+            }
+
+            using (Bitmap bitmap = new Bitmap(inputPath))
+            {
+                int height = bitmap.Height, width = bitmap.Width, promedio;
+                int[,] matrix = new int[height, width];
+                double funcion;
+
+                for (int i = 0; i < bitmap.Width; i++)
+                {
+                    for (int j = 0; j < bitmap.Height; j++)
+                    {
+                        funcion = ((.2125 * bitmap.GetPixel(i, j).R) + (.7154 * bitmap.GetPixel(i, j).G) + (.0721 * bitmap.GetPixel(i, j).B));
+                        promedio = Convert.ToInt32(funcion);
+                        bitmap.SetPixel(i, j, Color.FromArgb(bitmap.GetPixel(i, j).A, 255 - promedio, 255 - promedio, 255 - promedio));
+                        matrix[j, i] = 255 - promedio;
+                    }
+                }
+
+                bitmap.Save(outputhPathT);
+                SaveMatrixToTxt(matrix, outputhPathT);
+            }
+
+            return outputhPathT;
+        }
+
+        private static void SaveMatrixToTxt(int[,] impr, string outputPath)
+        {
+            if (outputPath.Contains(".png")) outputPath = outputPath.Replace(".png", ".txt");
+            if (outputPath.Contains(".jpg")) outputPath = outputPath.Replace(".jpg", ".txt");
+
+            using (var sw = new StreamWriter(outputPath))
+            {
+                for (int i = 0; i < impr.GetLongLength(0); i++)
+                {
+                    for (int j = 0; j < impr.GetLongLength(1); j++)
+                    {
+                        sw.Write(impr[i, j] + "\t");
+                    }
+                    sw.WriteLine("\n");
+                }
+
+                sw.Close();
+            }
         }
     }
 }

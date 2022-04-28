@@ -27,3 +27,61 @@ C:\Users\sprno\source\repos\ProcesadorImagenes\obj\Release\net5.0-windows\Proces
 C:\Users\sprno\source\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ref\ProcesadorImagenes.dll
 C:\Users\sprno\source\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.pdb
 C:\Users\sprno\source\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.genruntimeconfig.cache
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.exe
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.deps.json
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.runtimeconfig.json
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.runtimeconfig.dev.json
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.dll
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.pdb
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\Microsoft.Win32.SystemEvents.dll
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\System.Drawing.Common.dll
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Respaldo 2022\repos\ProcesadorImagenes\bin\Release\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.csproj.AssemblyReference.cache
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\MainWindow.g.cs
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\App.g.cs
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes_MarkupCompile.cache
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes_MarkupCompile.lref
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\MainWindow.baml
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.g.resources
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.AssemblyInfoInputs.cache
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.AssemblyInfo.cs
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.csproj.CoreCompileInputs.cache
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.csproj.CopyComplete
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.dll
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\refint\ProcesadorImagenes.dll
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.pdb
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.genruntimeconfig.cache
+D:\Respaldo 2022\repos\ProcesadorImagenes\obj\Release\net5.0-windows\ref\ProcesadorImagenes.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.exe
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.deps.json
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.runtimeconfig.json
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.runtimeconfig.dev.json
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\ProcesadorImagenes.pdb
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\System.Drawing.Common.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\bin\Release\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.csproj.AssemblyReference.cache
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\MainWindow.g.cs
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\App.g.cs
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes_MarkupCompile.cache
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes_MarkupCompile.lref
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\MainWindow.baml
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.g.resources
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.AssemblyInfoInputs.cache
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.AssemblyInfo.cs
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.csproj.CoreCompileInputs.cache
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.csproj.CopyComplete
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\refint\ProcesadorImagenes.dll
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.pdb
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ProcesadorImagenes.genruntimeconfig.cache
+C:\Users\biote\OneDrive\Escritorio\ProcesadorImagenes\obj\Release\net5.0-windows\ref\ProcesadorImagenes.dll

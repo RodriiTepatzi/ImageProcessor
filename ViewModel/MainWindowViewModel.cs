@@ -22,7 +22,10 @@ namespace ProcesadorImagenes.ViewModels
         private ImageFile _ImageOutput;
         private ICommand load_ButtonCommand;
         private ICommand convertImage_ButtonCommand;
+        private string grayPath = "", negativePath = "";
 
+
+        [Obsolete]
         public MainWindowViewModel()
         {
             LoadButtonCommand = new RelayCommand(new Action<object>(SetImagePath));
@@ -99,6 +102,7 @@ namespace ProcesadorImagenes.ViewModels
             }
         }
 
+        [Obsolete]
         private void ConvertImage(object obj)
         {
             if (obj is string)
@@ -107,20 +111,37 @@ namespace ProcesadorImagenes.ViewModels
                 {
                     if (obj as string == "Gris")
                     {
-                        string path = ImageInputPath;
-                        path = path.Insert(ImageInputPath.Length - 4, "-Gris");
-                        Bitmap bitmap = new Bitmap(Image.FromFile(ImageInputPath));
-                        ImageProcessor.ConvertGray(bitmap).Save(path);
-                        ImageOutputPath = path;
+                        string outputPath = string.IsNullOrEmpty(grayPath) ? ImageInputPath : grayPath;
+                        outputPath = string.IsNullOrEmpty(negativePath) ? outputPath.Insert(ImageInputPath.Length - 4, "-Gris") : grayPath;
+
+                        ImageProcessor.GetMatrixLegacy(ImageInputPath);
+
+                        string tempPath = ImageProcessor.ConvertToGrayLegacy(ImageInputPath, outputPath);
+                        ImageOutputPath = tempPath;
+                        grayPath = tempPath;
                     }
 
                     if (obj as string == "Negativo")
                     {
-                        string path = ImageInputPath;
-                        path = path.Insert(ImageInputPath.Length - 4, "-Negativo");
-                        Bitmap bitmap = new Bitmap(Image.FromFile(ImageInputPath));
-                        ImageProcessor.ConvertNegative(bitmap).Save(path);
-                        ImageOutputPath = path;
+                        string outputPath = string.IsNullOrEmpty(negativePath) ? ImageInputPath : negativePath;
+                        outputPath = string.IsNullOrEmpty(negativePath) ? outputPath.Insert(ImageInputPath.Length - 4, "-Negativo") : negativePath;
+
+                        ImageProcessor.GetMatrixLegacy(ImageInputPath);
+                        string tempPath = ImageProcessor.ConvertToNegativeLegacy(ImageInputPath, outputPath);
+
+                        negativePath = tempPath;
+                        ImageOutputPath = tempPath;
+                    }
+
+                    if (obj as string == "Binario")
+                    {
+                        string outputPath = ImageInputPath;
+                        outputPath = outputPath.Insert(ImageInputPath.Length - 4, "-Binario");
+
+                        int[,] matrix = ImageProcessor.GetMatrixLegacy(ImageInputPath);
+                        ImageProcessor.ConvertToBinaryLegacy(matrix, ImageInputPath, outputPath);
+
+                        ImageOutputPath = outputPath;
                     }
                 }
                 else
